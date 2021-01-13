@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import com.jkhome.simplefitness.databinding.FragmentExerciseBinding
 
 //// TODO: Rename parameter arguments, choose names that match
@@ -53,10 +55,13 @@ class ExerciseFragment : Fragment() {
                 currentExercise = exercises[exerciseIndex]
                 setExercise()
             } else {
-
+                view.findNavController().navigate(R.id.action_exerciseFragment_to_wellDoneFragment)
             }
         }
 
+        binding.exitButton.setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_exerciseFragment_to_tryAgainFragment2)
+        )
         return binding.root
 
     }

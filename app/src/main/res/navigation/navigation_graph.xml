@@ -18,5 +18,22 @@
         android:id="@+id/exerciseFragment"
         android:name="com.jkhome.simplefitness.ExerciseFragment"
         android:label="fragment_exercise"
-        tools:layout="@layout/fragment_exercise" />
+        tools:layout="@layout/fragment_exercise" >
+        <action
+            android:id="@+id/action_exerciseFragment_to_wellDoneFragment"
+            app:destination="@id/wellDoneFragment" />
+        <action
+            android:id="@+id/action_exerciseFragment_to_tryAgainFragment2"
+            app:destination="@id/tryAgainFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/tryAgainFragment2"
+        android:name="com.jkhome.simplefitness.TryAgainFragment"
+        android:label="fragment_try_again"
+        tools:layout="@layout/fragment_try_again" />
+    <fragment
+        android:id="@+id/wellDoneFragment"
+        android:name="com.jkhome.simplefitness.WellDoneFragment"
+        android:label="fragment_well_done"
+        tools:layout="@layout/fragment_well_done" />
 </navigation>
