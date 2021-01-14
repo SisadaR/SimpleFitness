@@ -21,7 +21,8 @@
         tools:layout="@layout/fragment_exercise" >
         <action
             android:id="@+id/action_exerciseFragment_to_wellDoneFragment"
-            app:destination="@id/wellDoneFragment" />
+            app:destination="@id/wellDoneFragment"
+             />
         <action
             android:id="@+id/action_exerciseFragment_to_tryAgainFragment2"
             app:destination="@id/tryAgainFragment2" />
@@ -30,10 +31,22 @@
         android:id="@+id/tryAgainFragment2"
         android:name="com.jkhome.simplefitness.TryAgainFragment"
         android:label="fragment_try_again"
-        tools:layout="@layout/fragment_try_again" />
+        tools:layout="@layout/fragment_try_again" >
+        <action
+            android:id="@+id/action_tryAgainFragment2_to_exerciseFragment"
+            app:destination="@id/exerciseFragment"
+            app:popUpTo="@id/exerciseFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
     <fragment
         android:id="@+id/wellDoneFragment"
         android:name="com.jkhome.simplefitness.WellDoneFragment"
         android:label="fragment_well_done"
-        tools:layout="@layout/fragment_well_done" />
+        tools:layout="@layout/fragment_well_done" >
+        <action
+            android:id="@+id/action_wellDoneFragment_to_exerciseFragment"
+            app:destination="@id/exerciseFragment"
+            app:popUpTo="@id/exerciseFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>
